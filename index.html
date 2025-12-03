@@ -14,15 +14,21 @@
 
         <div class="input-group">
             <label for="cedula">Número de Cédula</label>
-            <input id="cedula" maxlength="12" placeholder="001-000000-0">
-            <p class="format-hint">Formato: XXX-XXXXXX-X</p>
+            <input id="cedula" type="text" maxlength="13" placeholder="XXX-XXXXXXX-X">
+            <p class="format-hint">Formato: XXX-XXXXXXX-X</p>
         </div>
 
         <button id="btnValidar" onclick="validarCedula()">Validar</button>
 
         <div id="result" class="result"></div>
     </div>
-
+ <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p class="mb-0">
+      <strong>Reynaldo Rodrigues – 100279390</strong><br>
+      Práctica: Servicio Web para validar la cédula de identidad y electoral<br>
+      <small>&copy; 2025 - Proyecto Académico INF5170</small>
+    </p>
+  </footer>
     <script src="app.js"></script>
 
 </body>
