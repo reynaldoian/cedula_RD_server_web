@@ -1,4 +1,4 @@
-const API_URL = "https://TU-SERVIDOR.onrender.com"; // 👈 CAMBIAR
+const API_URL = "https://cedula-rd-server-web.onrender.com";
 
 const cedulaInput = document.getElementById("cedula");
 const btn = document.getElementById("btnValidar");
