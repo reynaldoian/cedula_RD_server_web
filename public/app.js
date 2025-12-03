@@ -4,9 +4,9 @@ const cedulaInput = document.getElementById("cedula");
 const btn = document.getElementById("btnValidar");
 
 cedulaInput.addEventListener("input", e => {
-    let val = e.target.value.replace(/\D/g, '');   // Solo números
+    let val = e.target.value.replace(/\D/g, '');
 
-    // Límite real: 11 dígitos
+    // límite real: 11 dígitos
     val = val.slice(0, 11);
 
     if (val.length <= 3) {
@@ -17,9 +17,9 @@ cedulaInput.addEventListener("input", e => {
     } 
     else {
         e.target.value = 
-            val.slice(0, 3) + "-" + 
-            val.slice(3, 10) + "-" + 
-            val.slice(10, 11);
+            val.slice(0, 3) + "-" +
+            val.slice(3, 10) + "-" +
+            val.slice(10);
     }
 });
 
