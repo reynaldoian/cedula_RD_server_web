@@ -6,22 +6,25 @@ const btn = document.getElementById("btnValidar");
 cedulaInput.addEventListener("input", e => {
     let val = e.target.value.replace(/\D/g, '');   // Solo números
 
-    // Limitar a 11 dígitos
+    // Límite real: 11 dígitos
     val = val.slice(0, 11);
 
     if (val.length <= 3) {
         e.target.value = val;
     } 
     else if (val.length <= 10) {
-        e.target.value = val.slice(0, 3) + "-" + val.slice(3, 10);
+        e.target.value = val.slice(0, 3) + "-" + val.slice(3);
     } 
     else {
-        e.target.value = val.slice(0, 3) + "-" + val.slice(3, 10) + "-" + val.slice(10);
+        e.target.value = 
+            val.slice(0, 3) + "-" + 
+            val.slice(3, 10) + "-" + 
+            val.slice(10, 11);
     }
 });
 
 async function validarCedula() {
-    const raw = cedulaInput.value.replace(/\D/g, ""); // Solo dígitos
+    const raw = cedulaInput.value.replace(/\D/g, "");
     const result = document.getElementById("result");
 
     if (raw.length !== 11) {
@@ -53,3 +56,4 @@ async function validarCedula() {
     btn.disabled = false;
     btn.innerHTML = "Validar";
 }
+
