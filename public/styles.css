@@ -8,10 +8,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #002868 0%, #ce1126 100%);
+    /* CAMBIOS CLAVE: Usar flexbox para organizar el contenido */
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Organiza los hijos verticalmente */
+    /* Estas propiedades ya no son necesarias para centrar, pero se dejan si el HTML es simple */
+    justify-content: center; 
+    align-items: center; 
     padding: 20px;
 }
 
@@ -150,16 +153,24 @@ input:focus {
     margin-right: 8px;
     vertical-align: middle;
 }
+
+/* 🦶 FOOTER FIJO */
 .footer {
     width: 100%;
     text-align: center;
     color: white;
-    margin-top: 40px;
+    /* margin-top: 40px; <-- Se elimina o se ignora con position: fixed */
     padding: 20px 10px;
     font-size: 14px;
     background: rgba(0,0,0,0.25);
     backdrop-filter: blur(4px);
     border-top: 2px solid rgba(255,255,255,0.2);
+
+    /* CAMBIOS CLAVE PARA FIJARLO ABAJO */
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .footer strong {
