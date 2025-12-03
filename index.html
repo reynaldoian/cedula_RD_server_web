@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Cédula RD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🇩🇴 Validador de Cédula RD</h1>
+        <p class="subtitle">Servicio Web Módulo 10</p>
+
+        <div class="input-group">
+            <label for="cedula">Número de Cédula</label>
+            <input id="cedula" maxlength="12" placeholder="001-000000-0">
+            <p class="format-hint">Formato: XXX-XXXXXX-X</p>
+        </div>
+
+        <button id="btnValidar" onclick="validarCedula()">Validar</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
