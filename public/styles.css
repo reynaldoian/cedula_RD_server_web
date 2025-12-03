@@ -150,10 +150,6 @@ input:focus {
     margin-right: 8px;
     vertical-align: middle;
 }
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
 .footer {
     width: 100%;
     text-align: center;
@@ -174,3 +170,8 @@ input:focus {
     font-size: 12px;
     opacity: 0.8;
 }
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
