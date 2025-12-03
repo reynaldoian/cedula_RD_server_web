@@ -12,7 +12,7 @@ cedulaInput.addEventListener("input", e => {
     if (val.length <= 3) {
         e.target.value = val;
     } 
-    else if (val.length <= 11) {
+    else if (val.length <= 10) {
         e.target.value = val.slice(0, 3) + "-" + val.slice(3);
     } 
     else {
