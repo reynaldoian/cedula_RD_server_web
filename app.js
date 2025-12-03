@@ -6,12 +6,20 @@ const btn = document.getElementById("btnValidar");
 cedulaInput.addEventListener("input", e => {
     let val = e.target.value.replace(/\D/g, '');
 
+    // límite real: 11 dígitos
+    val = val.slice(0, 11);
+
     if (val.length <= 3) {
         e.target.value = val;
-    } else if (val.length <= 9) {
+    } 
+    else if (val.length <= 10) {
         e.target.value = val.slice(0, 3) + "-" + val.slice(3);
-    } else {
-        e.target.value = val.slice(0, 3) + "-" + val.slice(3, 9) + "-" + val.slice(9, 10);
+    } 
+    else {
+        e.target.value = 
+            val.slice(0, 3) + "-" +
+            val.slice(3, 10) + "-" +
+            val.slice(10);
     }
 });
 
@@ -19,10 +27,10 @@ async function validarCedula() {
     const raw = cedulaInput.value.replace(/\D/g, "");
     const result = document.getElementById("result");
 
-    if (raw.length !== 10) {
+    if (raw.length !== 11) {
         result.style.display = "block";
         result.className = "result error";
-        result.innerHTML = "❌ La cédula debe tener 10 dígitos";
+        result.innerHTML = "❌ La cédula debe tener 11 dígitos";
         return;
     }
 
@@ -48,3 +56,4 @@ async function validarCedula() {
     btn.disabled = false;
     btn.innerHTML = "Validar";
 }
+
