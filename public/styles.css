@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 
+/* 🌟 FONDO ESTILO BANDERA DOMINICANA */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #002868 0%, #ce1126 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,29 +15,34 @@ body {
     padding: 20px;
 }
 
+/* 🎯 TARJETA PRINCIPAL */
 .container {
     background: white;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     padding: 40px;
     max-width: 500px;
     width: 100%;
 }
 
+/* 📝 TÍTULOS */
 h1 {
-    color: #333;
+    color: #002868;
     text-align: center;
     margin-bottom: 10px;
     font-size: 28px;
+    font-weight: 800;
 }
 
 .subtitle {
     text-align: center;
     color: #666;
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
+/* 📌 INPUTS */
 .input-group {
     margin-bottom: 25px;
 }
@@ -44,7 +50,7 @@ h1 {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #555;
+    color: #333;
     font-weight: 600;
     font-size: 14px;
 }
@@ -60,38 +66,40 @@ input {
 
 input:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #002868;
+    box-shadow: 0 0 5px rgba(0, 40, 104, 0.25);
 }
 
-.btn {
+/* 🔵 BOTÓN */
+#btnValidar {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #002868 0%, #ce1126 100%);
     color: white;
     border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: 0.25s ease;
 }
 
-.btn:hover {
+#btnValidar:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-.btn:active {
+#btnValidar:active {
     transform: translateY(0);
 }
 
-.btn:disabled {
+#btnValidar:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     transform: none;
 }
 
+/* 📌 RESULTADOS */
 .result {
     margin-top: 25px;
     padding: 20px;
@@ -123,77 +131,14 @@ input:focus {
     color: #721c24;
 }
 
-.result-icon {
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.result-message {
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.info-box {
-    background: #f8f9fa;
-    border-left: 4px solid #667eea;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-.info-box h3 {
-    color: #667eea;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-.info-box p {
-    color: #666;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
+/* Pequeños textos */
 .format-hint {
     font-size: 12px;
-    color: #999;
+    color: #888;
     margin-top: 5px;
 }
 
-.api-info {
-    background: #e3f2fd;
-    border-left: 4px solid #2196f3;
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 5px;
-}
-
-.api-info h3 {
-    color: #1976d2;
-    font-size: 14px;
-    margin-bottom: 8px;
-}
-
-.api-info code {
-    background: #fff;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-size: 12px;
-    color: #d32f2f;
-}
-
-.api-description {
-    font-size: 13px;
-    color: #555;
-    margin-bottom: 8px;
-}
-
-.api-detail {
-    font-size: 12px;
-    color: #666;
-}
-
+/* Loader animación (si se usa) */
 .loader {
     display: inline-block;
     width: 16px;
