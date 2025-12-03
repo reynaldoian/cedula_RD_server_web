@@ -56,4 +56,3 @@ async function validarCedula() {
     btn.disabled = false;
     btn.innerHTML = "Validar";
 }
-
